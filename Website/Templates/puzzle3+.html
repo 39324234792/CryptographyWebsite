@@ -1,0 +1,36 @@
+{% extends "Base.html"%}
+{% block answer %}
+<a class="nav-item nav-link" href="/Puzzle3a">Answer Key</a>
+{% endblock %}
+{% block base %}
+<br>
+<div class="container">
+    <img id="Puzzle3" src="https://lh3.googleusercontent.com/KOCrqp2lrgzRKGIfdV00zKL6s6fy4moK1FOC5oQ_t6Lvo7rxjyLthDqwKMtWLps4Y2tnXZMzqUZlWq54U9I9xmhDjTBciuKKaW6qGJTV8h_5muPMBZNyt4I-qc6D6sl4x6DtW8QX8A=w2400">
+    <br>
+    <br>
+    <form id="pz3" action="/action_page.php" method="get">
+      Full Phrase:<input type="text" name="-1" value="" placeholder="Guess">
+      <br>
+    </form>
+    <br>
+    <button onclick="pz33()">Check</button>
+    <p id="demo33"></p>
+    <script>
+      function pz33() {
+        var x = document.getElementById("pz3");
+        var text = "";
+        var i;
+        for (i = 0; i < x.length ;i++) {
+          text += x.elements[i].value;
+        }
+        if (text === "THE INDUSTRIAL REVOLUTION HAS BEEN A DISASTER FOR HUMANS") {
+          document.getElementById("demo33").innerHTML = "Correct";
+        }
+        else {
+          document.getElementById("demo33").innerHTML = "Nope";
+        }
+        //The Industrial Revolution and its consequences have been a disaster for the human race
+      }
+    </script>
+</div>
+{% endblock %}

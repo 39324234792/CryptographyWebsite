@@ -1,0 +1,36 @@
+{% extends "Base.html"%}
+{% block answer %}
+<a class="nav-item nav-link" href="/Puzzle2a">Answer Key</a>
+{% endblock %}
+{% block base %}
+    <br>
+    <div class="container">
+      <img id="Puzzle2" src="https://lh3.googleusercontent.com/IBC5M5N9qxqfMPkZcp27VNWmh6MLG1LcrOXQoGtZYje0tGHc9p3VSW-3sFLEUb77r0N8QT5hZsyaSS-AfvUBYbpFSJ8F1sjBO1eqjoqojTpdeKJ4kv_Swa0xfY4br7OdvCcL3Pp9fA=w2400">
+      <br>
+      <br>
+      <form id="pz2" action="/action_page.php" method="get">
+        Full Phrase:<input type="text" name="-1" value="" placeholder="Guess"><br>
+      </form>
+      <br>
+      <button onclick="pz22()">Check</button>
+      <p id="demo22"></p>
+      <script>
+        function pz22() {
+          var x = document.getElementById("pz2");
+          var text = "";
+          var i;
+          for (i = 0; i < x.length ;i++) {
+            text += x.elements[i].value;
+          }
+          if (text === "TABLES MADE OF WOOD ARE COOL") {
+            document.getElementById("demo22").innerHTML = "Correct";
+          }
+          else {
+            document.getElementById("demo22").innerHTML = "Nope";
+          }
+
+        }
+      </script>
+    </div>
+
+{% endblock %}

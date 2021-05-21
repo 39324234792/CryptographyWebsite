@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+    <title>Cryptography</title>
+</head>
+<style>
+       div {text-align: center;}
+      img {
+      border: 3px solid #000000
+      }
+      body {
+        background-color: lightblue;
+        color: black;
+      }
+      p {
+        max-width: 800px;
+        margin: auto;
+      }
+      #grad1 {
+          height: 760px;
+          background-image: linear-gradient(to bottom right, red, yellow);
+       }
+</style>
+<body>
+    <div id="grad1">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link" id="home" href="/">Home</a>
+              <a class="nav-item nav-link" href="/levels">Levels</a>
+              {% block answer %} {% endblock %}
+            </div>
+          </div>
+        </nav>
+        <div>
+            <br>
+            <h1>Instructions</h1>
+            <br>
+            <p>
+                Each letter of the alphabet used in the string has a character that matches it. In the example below you can see the B = # so you could fill in the blanks above the #’s with b’s. At that point you have “Billy l_ _ es bob.” You can see that i = $ so you can fill in the corresponding blanks and you will be left with “Billy li_es Bob.” You can infer that ~ = k. This is a watered down example, in the actual game it becomes more of a guessing game, however the principles are the same.
+            </p>
+            <br>
+            <a href="https://lh3.googleusercontent.com/yCr4vcdJxA9ZD45Blx02DCSFHVDnq-XnxC4DdFxoaYbkHlvhz1GzCN1r4FMVP2yq5AZwy2YhxLoXXdlAhOmioia1X3zVMrmoFBDLYvbEHcLEUw0JxVvjGCFkqJ8cF6Q79dke40GvEg=w2400?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/yCr4vcdJxA9ZD45Blx02DCSFHVDnq-XnxC4DdFxoaYbkHlvhz1GzCN1r4FMVP2yq5AZwy2YhxLoXXdlAhOmioia1X3zVMrmoFBDLYvbEHcLEUw0JxVvjGCFkqJ8cF6Q79dke40GvEg=w443-h103-p-k" /> </a>
+        </div>
+        <script
+          src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+          integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+          integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+          crossorigin="anonymous"
+        ></script>
+    </div>
+</body>
+</html>

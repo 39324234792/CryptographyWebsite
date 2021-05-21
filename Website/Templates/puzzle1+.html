@@ -1,0 +1,41 @@
+{% extends "Base.html"%}
+{% block answer %}
+<a class="nav-item nav-link" href="/Puzzle1a">Answer Key</a>
+{% endblock %}
+{% block base %}
+    <br>
+    <div class="container">
+      <img id="Puzzle1" src="https://lh3.googleusercontent.com/w3ZW9J4i7yrC9zpJe_qq-O-C7hk-lbi1ucuboZv1qqd8G5bfK5JbsrQku_Yz2KgGAwe2Jhr9_FMRR4ghu6dA5dL9DH7_4DFvSttM2Z-IH17m7O_owQT9z76WxWHDx2VKInBB4eNzkA=w2400">
+      <br>
+      <br>
+      <form id="frm1" action="/action_page.php" method="get">
+        Full Phrase:<input type="text" name="-1" value="" placeholder="Guess">
+        <br>
+      </form>
+      <br>
+      <button onclick="pz1pz()">Check</button>
+      <p id="demo1"></p>
+      <p id="demo"></p>
+      <p id="demo2"></p>
+      <p id="demo3"></p>
+      <script>
+        function pz1pz() {
+          var x = document.getElementById("frm1");
+          var text = "";
+          var i;
+          for (i = 0; i < x.length ;i++) {
+            text += x.elements[i].value;
+          }
+          if (text === "THE DOG IS DEAD"){
+            document.getElementById("demo2").innerHTML = "Correct";
+          }
+          else {
+            document.getElementById("demo2").innerHTML = "Nope";
+          }
+
+        }
+
+      </script>
+
+    </div>
+{% endblock %}
